@@ -1,0 +1,691 @@
+/* HOME PAGE */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  /* font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji,
+      Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji; */
+  font-family: "Josefin Sans", sans-serif;
+  font-style: normal;
+  background-color: #141c24ff;
+  color: "#B7C7D7";
+  line-height: 1.5;
+  transition: all 0.2s;
+}
+
+ion-icon {
+  color: #c69963;
+  font-size: 28px;
+}
+
+ion-icon:hover {
+  color: #b7c7d7;
+}
+
+.nav {
+  display: flex;
+  gap: 24px;
+  padding: 20px 32px;
+  font-size: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links {
+  text-decoration: none !important;
+  color: #c69963;
+}
+
+.nav-links:hover {
+  color: #b7c7d7;
+}
+
+.nav-events {
+  display: flex;
+  align-items: center;
+  gap: 62px;
+}
+
+.no-underline {
+  text-decoration: none !important;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* IMMERSIVE CONTAINER */
+.immersive-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #c69963;
+
+  padding: 48px;
+  height: 540px;
+  color: #141c24ff;
+  font-family: "Arial", sans-serif;
+}
+
+.immersive-content {
+  flex: 1;
+  padding: 24px;
+}
+
+.immersive-content h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 42px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.immersive-content p {
+  font-family: "Josefin Sans", sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.immersive-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+#immersive-img1 img {
+  width: 100%;
+  max-width: 800px;
+  /* border-radius: 8px; */
+}
+
+#img2 {
+  display: none;
+}
+
+/* SLIDERS SECTION */
+.slider-section {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #141c24ff;
+  position: relative;
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.slider-item {
+  flex: 0 0 100%;
+  text-align: center;
+}
+
+.slide-image {
+  width: 100%;
+  max-width: 1000px;
+  height: 600px;
+  object-fit: cover;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.slide-title {
+  margin-top: 45px;
+  font-size: 1.5rem;
+  color: rgb(250, 252, 254);
+}
+.slider-title {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 45px;
+  font-size: 52px;
+  color: #c69963;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  border-radius: 50%;
+}
+
+.prev-arrow {
+  left: 10px;
+}
+
+.next-arrow {
+  right: 10px;
+}
+
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* AMINITIES */
+.amenities-section {
+  background-color: #c69963;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.amenities-title {
+  text-align: center;
+  font-size: 45px;
+  margin-top: 25px;
+
+  font-family: "Josefin Sans", sans-serif;
+  color: #141c24ff;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 48px;
+  padding-left: 32px;
+  width: 1200px;
+}
+
+.amenity-item {
+  /* padding: 10px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border-radius: 6px;
+  width: calc(25% - 15px); */
+  display: flex;
+  gap: 16px;
+  color: #141c24ff;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.amenity-item:hover {
+  transform: translateY(-5px);
+}
+
+.amenity-icon {
+  font-size: 24px;
+  margin-bottom: 10px;
+  margin-right: 8px;
+}
+
+.amenity-name {
+  font-size: 20px;
+  font-family: "Josefin Sans", sans-serif;
+  font-style: normal;
+  color: #141c24ff;
+}
+
+.hotel-map-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hotel-map-inner-box {
+  margin-top: 64px;
+  margin-bottom: 64px;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  max-width: 1020px;
+}
+
+.hotel-map-info {
+  background-color: #c69963;
+  padding: 20px 32px;
+  font-weight: 500;
+  color: #141c24ff;
+  height: 540px;
+}
+
+.hotel-map-info > h1 {
+  font-size: 42px;
+}
+
+.hotel-map-info p {
+  font-size: 16px;
+  margin-top: 16px;
+}
+
+.footer {
+  background-color: #141c24ff;
+  padding: 80px;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 0.4fr;
+  gap: 24px;
+  padding-bottom: 16px;
+}
+
+.footer-hotel-info {
+  font-size: 28px;
+  font-weight: 600;
+  color: #f4ece1;
+}
+
+.footer-cols {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-cols > h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+  color: #c69963;
+}
+
+.footer-cols-links-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.footer-cols-links {
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.footer-cols-links:hover {
+  color: #b7c7d7;
+}
+
+.footer-img {
+  grid-column: 1/5;
+  text-align: center;
+  overflow-x: hidden;
+  margin-top: 16px;
+}
+
+.footer-icons {
+  color: #fff !important;
+}
+
+/* Position the dropdown correctly */
+.login-container {
+  position: relative;
+}
+
+/* Dropdown menu (hidden by default) */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: -28px;
+  background-color: #141c24ff;
+  /* border: 1px solid #ccc; */
+  color: #c69963;
+  border-radius: 2px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  width: 150px;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+/* Show dropdown when hovered */
+.dropdown-menu.show {
+  display: flex;
+}
+
+/* Dropdown items */
+.dropdown-item {
+  padding: 20px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #c69963;
+  border-bottom: 0.5px solid #ddd;
+  display: block;
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+/* Hover effect */
+.dropdown-item:hover {
+  background-color: #1c2631;
+}
+
+.logout-btn {
+  background-color: #141c24ff;
+  border: none;
+  width: 100%;
+  text-align: left;
+}
+
+/* General styles */
+.nav {
+  display: flex;
+  gap: 24px;
+  padding: 20px 32px;
+  font-size: 20px;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.nav-events {
+  display: flex;
+  align-items: center;
+  gap: 62px;
+  transition: transform 0.3s ease-in-out;
+}
+.hamburger {
+  display: inline-block;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 10; /* Ensure hamburger is always on top */
+  position: absolute; /* Position the hamburger absolutely */
+  top: 15px; /* Adjust the distance from the top */
+  right: 20px; /* Adjust the distance from the right */
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #c69963;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    position: absolute;
+    top: 15px; /* Adjust for mobile */
+    right: 20px; /* Adjust for mobile */
+  }
+
+  .nav-events {
+    position: fixed; /* Fixed position to cover the entire screen */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full screen width */
+    height: 100vh; /* Full screen height */
+    flex-direction: column;
+    background-color: #141c24ff; /* Full-screen background color */
+    transform: translateY(-100%); /* Hide off-screen initially */
+    transition: transform 0.3s ease-in-out;
+    z-index: 9; /* Ensure it appears below the hamburger icon */
+  }
+
+  .nav-events.active {
+    transform: translateY(0); /* Bring the menu into view */
+  }
+
+  .nav-events a {
+    color: #c69963; /* Link color */
+    text-decoration: none;
+    font-size: 2rem; /* Bigger font size for full-screen mode */
+    padding: 1.5rem;
+    text-align: center; /* Center the links */
+  }
+
+  .nav-events a:hover {
+    color: #b7c7d7; /* Hover effect for links */
+  }
+}
+
+/* Media Queries for Responsiveness */
+
+/* === General Styles for Small Screens (Mobile) === */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 50%; /* Reduce font size for better scaling */
+  }
+
+  .nav {
+    flex-direction: column; /* Stack navbar items vertically */
+    gap: 16px; /* Reduce gap */
+    padding: 10px 16px;
+  }
+
+  .nav-events {
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    gap: 16px;
+  }
+
+  .image-container {
+    height: 50vh; /* Reduce height for smaller screens */
+  }
+
+  .immersive-container {
+    flex-direction: column; /* Stack content vertically */
+    padding: 24px; /* Reduce padding */
+    height: auto; /* Adjust height */
+    text-align: center; /* Center align content */
+  }
+
+  .immersive-content h1 {
+    font-size: 28px; /* Reduce font size */
+    margin-bottom: 24px;
+  }
+
+  .immersive-content p {
+    font-size: 16px; /* Reduce font size */
+    line-height: 1.4;
+  }
+
+  .immersive-image {
+    padding: 16px; /* Reduce padding */
+  }
+
+  .slider-container {
+    max-width: 100%; /* Use full width */
+  }
+
+  .slide-image {
+    height: 300px; /* Reduce height */
+  }
+
+  .slider-title {
+    font-size: 36px; /* Reduce font size */
+  }
+
+  .amenities-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+    gap: 16px;
+    width: 100%; /* Use full width */
+    padding: 0;
+  }
+
+  .footer {
+    grid-template-columns: 1fr; /* Stack columns vertically */
+    padding: 40px;
+  }
+
+  .footer-cols {
+    padding: 16px; /* Reduce padding */
+  }
+
+  .footer-hotel-info {
+    font-size: 20px; /* Reduce font size */
+    text-align: center;
+  }
+
+  .hotel-map-inner-box {
+    grid-template-columns: 1fr; /* Stack map and info vertically */
+    gap: 16px; /* Add gap */
+  }
+
+  .hotel-map-info {
+    height: auto; /* Adjust height */
+    text-align: center; /* Center align text */
+  }
+
+  iframe {
+    height: 300px; /* Reduce map height */
+  }
+}
+
+/* === Styles for Medium Screens (Tablets) === */
+@media screen and (max-width: 1024px) {
+  .nav {
+    gap: 16px;
+    padding: 16px 24px;
+  }
+
+  .nav-events {
+    gap: 24px;
+  }
+
+  .immersive-container {
+    padding: 32px;
+    text-align: center;
+    height: auto;
+  }
+
+  .immersive-content h1 {
+    font-size: 36px; /* Adjust font size */
+  }
+
+  .immersive-content p {
+    font-size: 18px;
+  }
+
+  .amenities-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for tablets */
+    gap: 24px;
+  }
+
+  .slider-title {
+    font-size: 42px;
+  }
+
+  .slide-image {
+    height: 400px;
+  }
+
+  .footer {
+    grid-template-columns: 1fr 1fr; /* Two columns layout */
+    gap: 32px;
+  }
+
+  .footer-cols {
+    padding: 20px;
+  }
+
+  .footer-hotel-info {
+    font-size: 24px;
+  }
+
+  .hotel-map-inner-box {
+    grid-template-columns: 1fr; /* Stack map and info vertically */
+    gap: 16px;
+  }
+
+  iframe {
+    height: 400px;
+  }
+}
+
+/* === Styles for Extra Small Screens (Mobile Portrait) === */
+@media screen and (max-width: 480px) {
+  .nav {
+    padding: 8px 16px;
+  }
+
+  .nav-links {
+    font-size: 14px; /* Reduce font size */
+  }
+
+  .image-container {
+    height: 40vh; /* Further reduce height */
+  }
+
+  .immersive-content h1 {
+    font-size: 24px; /* Smaller font size */
+  }
+
+  .immersive-content p {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  .slider-title {
+    font-size: 28px; /* Smaller font size */
+  }
+
+  .slide-image {
+    height: 200px; /* Reduce height further */
+  }
+
+  .amenities-grid {
+    grid-template-columns: 1fr; /* Single-column layout */
+  }
+
+  .footer {
+    padding: 24px;
+  }
+
+  .footer-cols {
+    padding: 12px;
+  }
+
+  iframe {
+    height: 250px; /* Reduce map height further */
+  }
+}
